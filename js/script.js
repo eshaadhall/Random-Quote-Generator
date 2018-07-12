@@ -96,7 +96,7 @@ var quotes = [{
 
 //function getRandomQuote= selects and returns a random quote object from the quotes array.
 function getRandomQuote(){
- var random_number=  Math.floor(Math.random()*12);//always returns between 0 and 5 (5 is exclusive)
+ var random_number =  Math.floor(Math.random()*12);//always returns between 0 and 5 (5 is exclusive)
  return quotes[random_number];
 }
 
@@ -104,8 +104,8 @@ function getRandomQuote(){
 //function printQuote calls the getRandomQuote function and stores the returned quote object in a variable//
 function printQuote(){
   random_color();
-  var tag=selTags();
-  var random_quote=getRandomQuote();
+  var tag = selTags();
+  var random_quote = getRandomQuote();
   //combining the strings containing the different properties of the quote obj using the HTML Template
  if(random_quote.tags==tag){
   var message= '<p class="quote">'+random_quote.quote;
@@ -130,17 +130,17 @@ else {
 }
 // Exceeds Expectation : Change the backgorund color of the page everytime the quote changes
 function random_color(){
-  var color= '#';
-  var letters= '0123456789ABCDEF';
-  for(var i=0; i<6; i++){
+  var color = '#';
+  var letters = '0123456789ABCDEF';
+  for(var i = 0; i<6; i++){
       color+=letters[Math.floor(Math.random()*16)];
   }
 document.body.style.backgroundColor =color;
 }
 // Exceeds Expectation : User has to select a Tag and the quotes displayed would be from the selected Tag category only.
 function selTags(){
-  var mylist=document.getElementById("myList");
+  var mylist= document.getElementById("myList");
   return mylist.options[mylist.selectedIndex].text;
 }
 // Exceeds Expectation : After every 30 seconds, a new quote appears.
-var intervalID= window.setInterval(printQuote,30000);
+var intervalID = window.setInterval(printQuote,30000);
