@@ -103,6 +103,7 @@ function getRandomQuote(){
 
 //function printQuote calls the getRandomQuote function and stores the returned quote object in a variable//
 function printQuote(){
+  random_color();
   var tag=selTags();
   var random_quote=getRandomQuote();
   //combining the strings containing the different properties of the quote obj using the HTML Template
